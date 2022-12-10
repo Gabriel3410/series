@@ -2,18 +2,16 @@
 
 namespace App\Models;
 
-use Illumunate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Serie extends Model
+class Episode extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome'];
+    public $timestamps= false;
 
     public function season()
     {
-        return $this->hasMany(season::class, 'series_id');
+        return $this->belongsTo(season::class);
     }
-
 }
