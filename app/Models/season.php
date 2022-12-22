@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class season extends Model
 {
     use HasFactory;
+    protected $fillabel =['number'];
 
     public function series()
     {
